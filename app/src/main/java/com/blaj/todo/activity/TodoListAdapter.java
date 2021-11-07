@@ -1,6 +1,5 @@
 package com.blaj.todo.activity;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,16 +9,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.blaj.todo.R;
 import com.blaj.todo.model.Task;
+import com.blaj.todo.service.FileService;
+import com.blaj.todo.utils.ToastHandler;
 
 import java.util.List;
 
 public class TodoListAdapter extends RecyclerView.Adapter<TodoListViewHolder> {
-    private Context context;
-    private List<Task> todoList;
+    private final List<Task> todoList;
+    private final FileService fileService;
+    private final ToastHandler toastHandler;
 
-    public TodoListAdapter(Context context, List<Task> todoList) {
-        this.context = context;
+    public TodoListAdapter(List<Task> todoList, FileService fileService, ToastHandler toastHandler) {
         this.todoList = todoList;
+        this.fileService = fileService;
+        this.toastHandler = toastHandler;
     }
 
     @NonNull
@@ -27,7 +30,7 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListViewHolder> {
     public TodoListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.task_item, parent, false);
 
-        return new TodoListViewHolder(view);
+        return new TodoListViewHolder(view, this, fileService, toastHandler);
     }
 
     @Override
@@ -40,5 +43,9 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListViewHolder> {
     @Override
     public int getItemCount() {
         return todoList.size();
+    }
+
+    public List<Task> getTodoList() {
+        return todoList;
     }
 }

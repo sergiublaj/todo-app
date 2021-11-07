@@ -3,37 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/card_item"
-        android:layout_width="413dp"
-        android:layout_height="142dp"
+        android:layout_width="375dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginBottom="@dimen/margin_top"
         android:background="#489DF360"
         android:shadowColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/remove_todo"
-        android:layout_width="42dp"
-        android:layout_height="43dp"
+        android:layout_width="46dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="@+id/card_item"
         app:layout_constraintEnd_toEndOf="@+id/card_item"
-        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/card_item"
         app:layout_constraintTop_toTopOf="@+id/card_item"
-        app:layout_constraintVertical_bias="0.06"
+        app:layout_constraintVertical_bias="0.042"
         app:srcCompat="@android:drawable/ic_delete" />
 
     <TextView
         android:id="@+id/todo_title"
-        android:layout_width="337dp"
+        android:layout_width="320dp"
         android:layout_height="36dp"
-        android:text="Title"
         android:textAlignment="textStart"
         android:textAllCaps="true"
         android:textColor="@color/black"
@@ -41,18 +45,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/todo_body"
         app:layout_constraintEnd_toStartOf="@+id/remove_todo"
-        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/card_item"
         app:layout_constraintTop_toTopOf="@+id/card_item"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintVertical_bias="0.684" />
 
     <TextView
         android:id="@+id/todo_body"
-        android:layout_width="341dp"
+        android:layout_width="320dp"
         android:layout_height="76dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="casual"
-        android:text="Body"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textStyle="italic"

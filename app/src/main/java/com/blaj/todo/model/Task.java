@@ -1,6 +1,8 @@
 package com.blaj.todo.model;
 
-public class Task {
+import java.io.Serializable;
+
+public class Task implements Serializable {
     private int id;
     private String title;
     private String description;
