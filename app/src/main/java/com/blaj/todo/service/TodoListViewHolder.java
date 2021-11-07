@@ -1,4 +1,4 @@
-package com.blaj.todo.activity;
+package com.blaj.todo.service;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.blaj.todo.R;
-import com.blaj.todo.service.FileService;
 import com.blaj.todo.utils.ToastHandler;
 
 public class TodoListViewHolder extends RecyclerView.ViewHolder {
