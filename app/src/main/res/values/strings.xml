@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">ToDo</string>
+    <string name="app_name">To Do</string>
     <string name="app_title">To Do list</string>
+    <string name="app_version">v1.03</string>
+
     <string name="todo">TODO</string>
     <string name="new_todo">Add a new to do</string>
     <string name="todo_title_hint">Title</string>
