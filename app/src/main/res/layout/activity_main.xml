@@ -44,34 +44,37 @@
         android:layout_width="67dp"
         android:layout_height="67dp"
         android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
         android:src="@android:drawable/ic_input_add"
         app:fabCustomSize="67dp"
         app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upper_background"
-        app:layout_constraintVertical_bias="0.911"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
-        android:focusable="true"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.945"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todo_list"
-        android:layout_width="421dp"
-        android:layout_height="737dp"
+        android:layout_width="414dp"
+        android:layout_height="799dp"
         android:layout_marginTop="104dp"
         android:background="@drawable/lower_rounded"
+        android:paddingStart="@dimen/padding_start"
+        android:paddingTop="@dimen/margin_top"
+        android:paddingBottom="135dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/upper_background" />
 
     <TextView
         android:id="@+id/app_version"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="62dp"
+        android:layout_height="32dp"
         android:fontFamily="casual"
         android:text="@string/app_version"
         android:textColor="@color/black"
@@ -79,9 +82,9 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/todo_list"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/app_title"
         app:layout_constraintTop_toTopOf="@+id/upper_background"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintVertical_bias="0.75" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

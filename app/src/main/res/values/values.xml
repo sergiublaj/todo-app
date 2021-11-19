@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="lower_background_radius">50dp</dimen>
+    <dimen name="padding_start">-5dp</dimen>
+    <dimen name="padding_top">25dp</dimen>
+    <dimen name="padding_bottom">135dp</dimen>
+
     <dimen name="shadow">7</dimen>
 </resources>
